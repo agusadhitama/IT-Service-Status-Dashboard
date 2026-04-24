@@ -1,0 +1,170 @@
+:root {
+    --bg-color: #EAEFEF;
+    --card-bg: #18122B;
+    --text-primary: #EAEFEF;
+    --text-secondary: #EAEFEF;
+    --accent: #10b981;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; 
+}
+
+body { 
+    background-color: var(--bg-color); 
+    color: var(--text-primary); 
+    min-height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    padding: 2rem; 
+    background-image: radial-gradient(circle at top right, #2F2FE4, #1A1953); 
+}
+
+.container { 
+    max-width: 1200px; 
+    width: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 2.5rem; 
+}
+
+header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    border-bottom: 1px solid #10b981; 
+    padding-bottom: 1.5rem; 
+    flex-wrap: wrap; 
+    gap: 1rem; 
+}
+
+h1 { 
+    font-size: 1.8rem; 
+    font-weight: 600; 
+    display: flex; 
+    align-items: center; 
+    gap: 0.75rem; 
+    color: var(--accent); 
+    letter-spacing: 0.5px;
+}
+
+header p { 
+    color: var(--text-secondary); 
+    margin-top: 0.4rem; 
+    font-size: 0.95rem; 
+}
+
+.auto-refresh { 
+    background: var(--card-bg); 
+    padding: 0.6rem 1.2rem; 
+    border-radius: 20px; 
+    font-size: 0.85rem; 
+    color: var(--text-secondary); 
+    border: 1px solid rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(10px);
+}
+
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 1.5rem; 
+}
+
+.card { 
+    background: var(--card-bg); 
+    border-radius: 16px; 
+    padding: 1.5rem; 
+    backdrop-filter: blur(12px); 
+    border: 1px solid rgba(255, 255, 255, 0.05); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 1.2rem; 
+}
+
+.card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4); 
+    border-color: rgba(255, 255, 255, 0.15); 
+}
+
+.card-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.service-name { 
+    font-size: 1.2rem; 
+    font-weight: 600; 
+    letter-spacing: 0.5px;
+}
+
+.status-badge { 
+    padding: 0.4rem 0.8rem; 
+    border-radius: 20px; 
+    font-size: 0.75rem; 
+    font-weight: 700; 
+    display: flex; 
+    align-items: center; 
+    gap: 0.5rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+
+.status-badge::before { 
+    content: ''; 
+    display: inline-block; 
+    width: 8px; 
+    height: 8px; 
+    border-radius: 50%; 
+}
+
+/* Dynamic Status Modifiers */
+.operational { background: rgba(16, 185, 129, 0.1); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.2); }
+.operational::before { background: var(--success); box-shadow: 0 0 10px var(--success); }
+
+.degraded { background: rgba(245, 158, 11, 0.1); color: var(--warning); border: 1px solid rgba(245, 158, 11, 0.2); }
+.degraded::before { background: var(--warning); box-shadow: 0 0 10px var(--warning); }
+
+.outage { background: rgba(239, 68, 68, 0.1); color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.2); }
+.outage::before { background: var(--danger); box-shadow: 0 0 10px var(--danger); }
+
+.loading { background: rgba(255, 255, 255, 0.05); color: var(--text-secondary); }
+
+.incident-log { 
+    font-size: 0.9rem; 
+    color: var(--text-secondary); 
+    background: rgba(0, 0, 0, 0.3); 
+    padding: 1rem; 
+    border-radius: 8px; 
+    flex-grow: 1; 
+    line-height: 1.5;
+    border-left: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.updated-at { 
+    font-size: 0.75rem; 
+    color: rgba(148, 163, 184, 0.5); 
+    text-align: right; 
+}
+
+footer { 
+    text-align: center; 
+    color: var(--text-secondary); 
+    font-size: 0.95rem; 
+    margin-top: 2rem; 
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    padding-top: 2rem; 
+}
+
+footer strong { 
+    color: var(--accent); 
+    font-weight: 600;
+}
