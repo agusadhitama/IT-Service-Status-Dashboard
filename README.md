@@ -6,7 +6,7 @@
 
 A lightweight, real-time IT service status dashboard designed for IT Support and System Administrators. This aggregator fetches public JSON endpoints from critical infrastructure providers to monitor their health status in one centralized, visually appealing dashboard.
 
-## ✨ Features
+## Features
 
 - **Real-Time Monitoring:** Fetches live data directly from official public status APIs (GitHub, Cloudflare, Reddit, Discord).
 - **Auto-Refresh Mechanism:** Automatically syncs data every 60 seconds so you never miss an outage.
@@ -15,18 +15,18 @@ A lightweight, real-time IT service status dashboard designed for IT Support and
 - **Glassmorphism UI:** Modern, clean, dark-mode design using advanced CSS techniques (backdrop-filter) and CSS Variables.
 - **Zero Dependencies:** Built entirely with Vanilla JavaScript. No backend, no heavy frameworks, no NPM packages required.
 
-## 🚀 Live Demo
+## Live Demo
 
 [View Live Dashboard Here](https://agusadhitama.github.io/IT-Service-Status-Dashboard)
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **HTML5:** Semantic structure.
 - **CSS3:** Custom variables, Flexbox, CSS Grid, and Glassmorphism styling.
 - **Vanilla JavaScript (ES6+):** Async/Await API fetching, DOM manipulation, and interval management.
 - **FontAwesome:** Scalable vector icons.
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 ├── index.html    # Main HTML document
