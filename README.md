@@ -4,7 +4,7 @@
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-A lightweight, real-time IT service status dashboard designed for IT Support and System Administrators. This aggregator fetches public JSON endpoints from critical infrastructure providers to monitor their health status in one centralized, visually appealing dashboard.
+A lightweight, real time IT service status dashboard designed for IT Support and System Administrators. This aggregator fetches public JSON endpoints from critical infrastructure providers to monitor their health status in one centralized, visually appealing dashboard.
 
 ## Features
 
